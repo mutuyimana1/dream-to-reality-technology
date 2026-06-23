@@ -96,9 +96,14 @@ export default function LandingPage(): JSX.Element {
               businesses transform their work into smart digital solutions.
             </p>
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center md:justify-start">
-              <button className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-lg shadow-violet-300 transition-colors">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdNWT3jvmJwWtBahlRBTp4bJZI5ABkBuKGqpERxyXSIkRK9og/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full cursor-pointer sm:w-auto px-6 py-3.5 rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-lg shadow-violet-300 transition-colors"
+              >
                 <FaGraduationCap /> <span>Enroll & Start Learning</span>
-              </button>
+              </a>
               <button className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white hover:bg-slate-50 text-slate-800 font-medium flex items-center justify-center gap-2 border border-slate-300 shadow-sm transition-colors">
                 <FcUnlock /> <span>Build Your Digital Solution</span>
               </button>
@@ -412,15 +417,16 @@ export default function LandingPage(): JSX.Element {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <ul className="space-y-3 text-slate-300 text-[0.95rem]">
-              <li>realitytech@gmail.com</li>
+              <li>d2rtechy@gmail.com</li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4" /> +356 792-099 213
+                <Phone className="w-4 h-4" /> +250782099213
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4" /> +256 785 627 630
+                <Phone className="w-4 h-4" /> ±250785627690
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4" /> +256 788 009 026
+                <Phone className="w-4 h-4" />
+                +256788009026
               </li>
             </ul>
           </div>
