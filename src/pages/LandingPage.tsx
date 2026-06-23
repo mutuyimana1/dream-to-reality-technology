@@ -100,7 +100,7 @@ export default function LandingPage(): JSX.Element {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdNWT3jvmJwWtBahlRBTp4bJZI5ABkBuKGqpERxyXSIkRK9og/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full cursor-pointer sm:w-auto px-6 py-3.5 rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-lg shadow-violet-300 transition-colors"
+                className="w-full cursor-pointer sm:w-auto px-6 py-3.5 rounded-full border border-[#561db5] hoverd:bg-[#41158a] text-[#561db5] font-medium flex items-center justify-center gap-2 shadow-lg shadow-violet-300 transition-colors"
               >
                 <FaGraduationCap /> <span>Enroll & Start Learning</span>
               </a>
@@ -176,7 +176,7 @@ export default function LandingPage(): JSX.Element {
               </div>
 
               <div className="mt-auto pt-8 w-full">
-                <button className="w-full py-3.5 rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-md shadow-violet-200 transition-colors">
+                <button className="w-full py-3.5 rounded-full border border-[#561db5] hover:bg-d[#41158a] text-[#561db5] font-medium flex items-center justify-center gap-2 shadow-md shadow-violet-200 transition-colors">
                   <Briefcase className="w-5 h-5" />
                   {c.cta}
                 </button>
@@ -268,7 +268,7 @@ export default function LandingPage(): JSX.Element {
             <p className="mt-4 text-[0.95rem] text-slate-500 leading-relaxed max-w-[200px]">
               Students learn by doing, not just watching
             </p>
-            <div className="mt-auto pt-8 w-full">
+            {/* <div className="mt-auto pt-8 w-full">
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdNWT3jvmJwWtBahlRBTp4bJZI5ABkBuKGqpERxyXSIkRK9og/viewform"
                 target="_blank"
@@ -278,7 +278,7 @@ export default function LandingPage(): JSX.Element {
                 <GraduationCap className="w-5 h-5" />
                 Enroll Now
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Card 2 */}
@@ -297,12 +297,12 @@ export default function LandingPage(): JSX.Element {
             <p className="mt-4 text-[0.95rem] text-slate-500 leading-relaxed max-w-[200px]">
               Build projects that solve real problems
             </p>
-            <div className="mt-auto pt-8 w-full">
+            {/* <div className="mt-auto pt-8 w-full">
               <button className="w-full py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-700 hover:opacity-90 text-white font-medium flex items-center justify-center gap-2 shadow-md transition-opacity">
                 <Briefcase className="w-5 h-5" />
                 Start Learning
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Card 3 */}
@@ -320,12 +320,12 @@ export default function LandingPage(): JSX.Element {
             <p className="mt-4 text-[0.95rem] text-slate-500 leading-relaxed max-w-[200px]">
               No experience? No problem. We start from zero
             </p>
-            <div className="mt-auto pt-8 w-full">
+            {/* <div className="mt-auto pt-8 w-full">
               <button className="w-full py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-700 hover:opacity-90 text-white font-medium flex items-center justify-center gap-2 shadow-md transition-opacity">
                 <Briefcase className="w-5 h-5" />
                 Start Project
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -349,7 +349,7 @@ export default function LandingPage(): JSX.Element {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdNWT3jvmJwWtBahlRBTp4bJZI5ABkBuKGqpERxyXSIkRK9og/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3.5 cursor-pointer rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-md shadow-violet-200 transition-colors w-max"
+                className="px-8 py-3.5 mt-5 cursor-pointer rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-md shadow-violet-200 transition-colors w-max"
               >
                 <GraduationCap className="w-5 h-5" />
                 Enroll Now
@@ -368,7 +368,7 @@ export default function LandingPage(): JSX.Element {
               <p className="text-slate-600 text-[1.05rem] mb-8">
                 Turn your idea into a smart system
               </p>
-              <button className="px-8 py-3.5 rounded-full bg-transparent border-2 border-slate-200 text-[#561db5] hover:border-[#a78bfa] hover:bg-violet-50 font-medium flex items-center justify-center gap-2 transition-colors w-max">
+              <button className="px-8 mt-5 py-3.5 rounded-full bg-transparent border-2 border-slate-200 text-[#561db5] hover:border-[#a78bfa] hover:bg-violet-50 font-medium flex items-center justify-center gap-2 transition-colors w-max">
                 <Briefcase className="w-5 h-5" />
                 Start a Project
               </button>
