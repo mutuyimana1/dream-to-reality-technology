@@ -264,10 +264,15 @@ export default function LandingPage(): JSX.Element {
               Students learn by doing, not just watching
             </p>
             <div className="mt-auto pt-8 w-full">
-              <button className="w-full py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-700 hover:opacity-90 text-white font-medium flex items-center justify-center gap-2 shadow-md transition-opacity">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdNWT3jvmJwWtBahlRBTp4bJZI5ABkBuKGqpERxyXSIkRK9og/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full cursor-pointer py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-violet-700 hover:opacity-90 text-white font-medium flex items-center justify-center gap-2 shadow-md transition-opacity"
+              >
                 <GraduationCap className="w-5 h-5" />
                 Enroll Now
-              </button>
+              </a>
             </div>
           </div>
 
@@ -335,10 +340,15 @@ export default function LandingPage(): JSX.Element {
               <p className="text-slate-600 text-[1.05rem] mb-8">
                 Begin your journey in tech
               </p>
-              <button className="px-8 py-3.5 rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-md shadow-violet-200 transition-colors w-max">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdNWT3jvmJwWtBahlRBTp4bJZI5ABkBuKGqpERxyXSIkRK9og/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 cursor-pointer rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-md shadow-violet-200 transition-colors w-max"
+              >
                 <GraduationCap className="w-5 h-5" />
                 Enroll Now
-              </button>
+              </a>
             </div>
 
             {/* Vertical Divider */}
