@@ -8,7 +8,8 @@ import webDevImg from "../assets/web_dev.png";
 import fullStackImg from "../assets/full_stack.png";
 import techSkillsImg from "../assets/tech_skills.png";
 import futureReadyImg from "../assets/future_ready.png";
-
+import { FaGraduationCap } from "react-icons/fa6";
+import { FcUnlock } from "react-icons/fc";
 type Course = {
   image: string;
   title: string;
@@ -67,9 +68,14 @@ export default function LandingPage(): JSX.Element {
           <div className="flex items-center gap-2">
             <img src={logoImg} alt="D2RTECH" className="h-10 w-auto" />
           </div>
-          <button className="px-8 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium flex items-center gap-2 hover:opacity-90 shadow-sm transition-opacity text-sm">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdNWT3jvmJwWtBahlRBTp4bJZI5ABkBuKGqpERxyXSIkRK9og/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-2.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium inline-flex items-center gap-2 hover:opacity-90 shadow-sm transition-opacity text-sm"
+          >
             Apply &rarr;
-          </button>
+          </a>
         </header>
 
         {/* Hero Section */}
@@ -77,25 +83,27 @@ export default function LandingPage(): JSX.Element {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-xl"
+            className="max-w-xl text-center md:text-left mx-auto md:mx-0"
           >
-            <h1 className="text-6xl md:text-[5rem] font-bold leading-[1.1] text-black tracking-tidght">
-              Turn <span className="text-white drop-shadow-sm">Your</span> Tech Journey<br />
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-bold leading-[1.1] text-black tracking-tight">
+              Turn <span className="text-white drop-shadow-sm">Your</span> Tech
+              Journey
+              <br />
               Today
             </h1>
-            <p className="mt-8 text-[1.1rem] text-[#4b5563] leading-relaxed max-w-[500px]">
+            <p className="mt-6 md:mt-8 text-base md:text-[1.1rem] text-[#4b5563] leading-relaxed max-w-[500px] mx-auto md:mx-0">
               We train kids and adults with real-world tech skills and help
               businesses transform their work into smart digital solutions.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4 items-center">
-              <button className="px-6 py-3.5 rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center gap-2 shadow-lg shadow-violet-300 transition-colors">
-                🎓 <span>Enroll & Start Learning</span>
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center md:justify-start">
+              <button className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#561db5] hover:bg-[#41158a] text-white font-medium flex items-center justify-center gap-2 shadow-lg shadow-violet-300 transition-colors">
+                <FaGraduationCap /> <span>Enroll & Start Learning</span>
               </button>
-              <button className="px-6 py-3.5 rounded-full bg-white hover:bg-slate-50 text-slate-800 font-medium flex items-center gap-2 border border-slate-300 shadow-sm transition-colors">
-                💼 <span>Build Your Digital Solution</span>
+              <button className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white hover:bg-slate-50 text-slate-800 font-medium flex items-center justify-center gap-2 border border-slate-300 shadow-sm transition-colors">
+                <FcUnlock /> <span>Build Your Digital Solution</span>
               </button>
             </div>
-            <div className="mt-10 flex flex-wrap gap-6 text-[15px] font-medium text-[#111827]">
+            <div className="mt-8 md:mt-10 flex flex-wrap gap-4 md:gap-6 text-sm md:text-[15px] font-medium text-[#111827] justify-center md:justify-start">
               {[
                 "Beginner-friendly",
                 "Real projects",
@@ -108,7 +116,7 @@ export default function LandingPage(): JSX.Element {
               ))}
             </div>
           </motion.div>
-          
+
           {/* Right Column with Crescent Moon & Image */}
           <div className="relative flex justify-center items-center mt-12 md:mt-0">
             <div className="relative w-[80%] aspect-square max-w-[420px] rounded-full shadow-[-50px_40px_0_0_#4a0bba]">
@@ -122,28 +130,40 @@ export default function LandingPage(): JSX.Element {
         </section>
       </div>
 
-      <section className="max-w-7xl mx-auto px-6 py-20 bg-gradient-to-b from-white to-slate-50/50">
-        <h2 className="text-[2.5rem] font-bold text-center text-slate-900 tracking-tight">
+      <section className="max-w-7xl mx-auto px-6 py-16 md:py-20 bg-gradient-to-b from-white to-slate-50/50">
+        <h2 className="text-3xl md:text-[2.5rem] font-bold text-center text-slate-900 tracking-tight leading-tight">
           Start Your <span className="text-[#561db5]">Tech Journey</span> Today
         </h2>
-        <p className="text-center text-[#4b5563] mt-4 max-w-2xl mx-auto text-[1.05rem]">
+        <p className="text-center text-[#4b5563] mt-4 max-w-2xl mx-auto text-base md:text-[1.05rem]">
           We don't just build software — we solve real business problems by
           turning your processes into efficient digital systems.
         </p>
-        <div className="grid md:grid-cols-3 gap-8 mt-12 max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 max-w-[1100px] mx-auto">
           {courses.map((c: Course, i: number) => (
-            <div key={i} className="rounded-[1.5rem] bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300">
+            <div
+              key={i}
+              className="rounded-[1.5rem] bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300"
+            >
               <div className="w-full h-40 flex items-center justify-center mb-6">
-                <img src={c.image} alt={c.title} className="w-auto h-full object-contain" />
+                <img
+                  src={c.image}
+                  alt={c.title}
+                  className="w-auto h-full object-contain"
+                />
               </div>
-              <h3 className="text-[1.35rem] font-bold text-slate-900">{c.title}</h3>
+              <h3 className="text-[1.35rem] font-bold text-slate-900">
+                {c.title}
+              </h3>
               <p className="mt-2 text-[0.95rem] text-slate-500">{c.subtitle}</p>
-              
+
               <div className="mt-6 w-full flex justify-center">
                 <ul className="space-y-3 text-[0.9rem] text-slate-600 text-left w-full max-w-[220px]">
                   {c.points.map((p: string) => (
                     <li key={p} className="flex gap-2 items-start">
-                      <Check className="w-4 h-4 text-emerald-500 mt-[3px] shrink-0" strokeWidth={3} />
+                      <Check
+                        className="w-4 h-4 text-emerald-500 mt-[3px] shrink-0"
+                        strokeWidth={3}
+                      />
                       <span className="leading-tight">{p}</span>
                     </li>
                   ))}
@@ -159,31 +179,37 @@ export default function LandingPage(): JSX.Element {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-14 flex justify-center gap-x-8 gap-y-4 text-[0.95rem] font-medium text-slate-600 flex-wrap">
-          {["No experience needed", "Certificate included", "Hands-on projects"].map(
-            (t: string) => (
-              <span key={t} className="flex items-center gap-2">
-                <Check className="w-5 h-5 text-emerald-500" strokeWidth={2.5} />
-                {t}
-              </span>
-            ),
-          )}
+          {[
+            "No experience needed",
+            "Certificate included",
+            "Hands-on projects",
+          ].map((t: string) => (
+            <span key={t} className="flex items-center gap-2">
+              <Check className="w-5 h-5 text-emerald-500" strokeWidth={2.5} />
+              {t}
+            </span>
+          ))}
         </div>
       </section>
 
-      <section className="bg-gradient-to-r from-violet-50 to-violet-100 py-20">
+      <section className="bg-gradient-to-r from-violet-50 to-violet-100 py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-center leading-tight">
             Simple Process,{" "}
             <span className="text-violet-700">Powerful Results</span>
           </h2>
-          <div className="grid md:grid-cols-4 gap-4 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 mt-12">
             {steps.map(([n, t, d]: Step, i: number) => {
               let radiusClass = "rounded-2xl";
-              if (i === 0) radiusClass = "rounded-l-[3rem] rounded-r-2xl";
-              if (i === 3) radiusClass = "rounded-r-[3rem] rounded-l-2xl";
-              
+              if (i === 0)
+                radiusClass =
+                  "rounded-t-[3rem] sm:rounded-tl-[3rem] lg:rounded-tr-2xl lg:rounded-bl-[3rem] lg:rounded-l-[3rem] lg:rounded-t-2xl";
+              if (i === 3)
+                radiusClass =
+                  "rounded-b-[3rem] sm:rounded-br-[3rem] lg:rounded-bl-2xl lg:rounded-tr-[3rem] lg:rounded-r-[3rem] lg:rounded-b-2xl";
+
               return (
                 <div
                   key={n}
@@ -193,7 +219,9 @@ export default function LandingPage(): JSX.Element {
                     {n}
                   </div>
                   <h3 className="mt-8 text-xl font-bold text-slate-900">{t}</h3>
-                  <p className="mt-3 text-[0.95rem] text-slate-500 leading-relaxed max-w-[200px] mx-auto">{d}</p>
+                  <p className="mt-3 text-[0.95rem] text-slate-500 leading-relaxed max-w-[200px] mx-auto">
+                    {d}
+                  </p>
                 </div>
               );
             })}
@@ -211,19 +239,23 @@ export default function LandingPage(): JSX.Element {
         </div>
       </section>
 
-      <section className="py-20 relative z-10">
-        <h2 className="text-[2.5rem] font-bold text-center text-[#2A1B54] mb-4">
+      <section className="py-16 md:py-20 relative z-10">
+        <h2 className="text-3xl md:text-[2.5rem] font-bold text-center text-[#2A1B54] mb-4 leading-tight">
           Built for <span className="text-[#561db5]">Impact</span>
         </h2>
-        <p className="text-center text-slate-600 text-[1.1rem]">
+        <p className="text-center text-slate-600 text-base md:text-[1.1rem]">
           Be among the first generation of creators and innovators
         </p>
-        
-        <div className="max-w-[1100px] mx-auto px-6 grid md:grid-cols-3 gap-8 mt-14">
+
+        <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 md:mt-14">
           {/* Card 1 */}
           <div className="rounded-[1.5rem] bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300">
             <div className="w-full h-40 flex items-center justify-center mb-8">
-              <img src={techSkillsImg} alt="Tech Skills Programs" className="w-auto h-full object-contain" />
+              <img
+                src={techSkillsImg}
+                alt="Tech Skills Programs"
+                className="w-auto h-full object-contain"
+              />
             </div>
             <h3 className="text-[1.25rem] font-bold text-slate-900">
               Tech Skills <span className="text-[#561db5]">Programs</span>
@@ -242,10 +274,15 @@ export default function LandingPage(): JSX.Element {
           {/* Card 2 */}
           <div className="rounded-[1.5rem] bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300">
             <div className="w-full h-40 flex items-center justify-center mb-8">
-              <img src={webDevImg} alt="Digital Solutions Delivered" className="w-auto h-full object-contain" />
+              <img
+                src={webDevImg}
+                alt="Digital Solutions Delivered"
+                className="w-auto h-full object-contain"
+              />
             </div>
             <h3 className="text-[1.25rem] font-bold text-slate-900">
-              Digital Solutions <span className="text-[#561db5]">Delivered</span>
+              Digital Solutions{" "}
+              <span className="text-[#561db5]">Delivered</span>
             </h3>
             <p className="mt-4 text-[0.95rem] text-slate-500 leading-relaxed max-w-[200px]">
               Build projects that solve real problems
@@ -261,7 +298,11 @@ export default function LandingPage(): JSX.Element {
           {/* Card 3 */}
           <div className="rounded-[1.5rem] bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 flex flex-col items-center text-center transition-transform hover:-translate-y-1 duration-300">
             <div className="w-full h-40 flex items-center justify-center mb-8">
-              <img src={futureReadyImg} alt="Future-Ready Learners" className="w-auto h-full object-contain" />
+              <img
+                src={futureReadyImg}
+                alt="Future-Ready Learners"
+                className="w-auto h-full object-contain"
+              />
             </div>
             <h3 className="text-[1.25rem] font-bold text-slate-900">
               Future-Ready <span className="text-[#561db5]">Learners</span>
@@ -279,13 +320,12 @@ export default function LandingPage(): JSX.Element {
         </div>
       </section>
 
-      <section className="py-20 relative z-10 bg-gradient-to-b from-white to-violet-50/30">
-        <h2 className="text-[2.2rem] font-bold text-center text-[#2A1B54] mb-12">
+      <section className="py-16 md:py-20 relative z-10 bg-gradient-to-b from-white to-violet-50/30">
+        <h2 className="text-3xl md:text-[2.2rem] font-bold text-center text-[#2A1B54] mb-8 md:mb-12 leading-tight">
           Ready to Start?
         </h2>
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white/80 backdrop-blur-md rounded-[2rem] p-3 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white flex flex-col md:flex-row relative">
-            
             {/* Left Column */}
             <div className="flex-1 p-8 md:p-10 relative z-10">
               <div className="flex items-center gap-3 text-[#561db5] font-bold text-xl mb-3">
@@ -305,7 +345,7 @@ export default function LandingPage(): JSX.Element {
             <div className="hidden md:block w-px bg-slate-100 my-8"></div>
 
             {/* Right Column */}
-            <div className="flex-1 p-8 md:p-10 relative z-10 bg-slate-50/50 rounded-r-[1.8rem]">
+            <div className="flex-1 p-8 md:p-10 relative z-10 bg-slate-50/50 rounded-b-[1.5rem] md:rounded-bl-none md:rounded-r-[1.5rem]">
               <div className="flex items-center gap-3 text-[#2A1B54] font-bold text-xl mb-3">
                 <Briefcase className="w-6 h-6" />
                 <h3>Build Your Digital Solution</h3>
@@ -318,17 +358,20 @@ export default function LandingPage(): JSX.Element {
                 Start a Project
               </button>
             </div>
-            
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-[#2A224B] text-white py-16">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img src={logoImg} alt="D2RTECH" className="h-8 w-auto brightness-0 invert" />
+              <img
+                src={logoImg}
+                alt="D2RTECH"
+                className="h-8 w-auto brightness-0 invert"
+              />
             </div>
           </div>
           <div>
@@ -342,18 +385,33 @@ export default function LandingPage(): JSX.Element {
           <div>
             <h4 className="text-lg font-semibold mb-6">Services</h4>
             <ul className="space-y-3 text-slate-300 text-[0.95rem]">
-              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Websites</li>
-              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Mobile Apps</li>
-              <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Custom Systems</li>
+              <li className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span>{" "}
+                Websites
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span>{" "}
+                Mobile Apps
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span>{" "}
+                Custom Systems
+              </li>
             </ul>
           </div>
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <ul className="space-y-3 text-slate-300 text-[0.95rem]">
               <li>realitytech@gmail.com</li>
-              <li className="flex items-center gap-3"><Phone className="w-4 h-4" /> +356 792-099 213</li>
-              <li className="flex items-center gap-3"><Phone className="w-4 h-4" /> +256 785 627 630</li>
-              <li className="flex items-center gap-3"><Phone className="w-4 h-4" /> +256 788 009 026</li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4" /> +356 792-099 213
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4" /> +256 785 627 630
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4" /> +256 788 009 026
+              </li>
             </ul>
           </div>
         </div>
